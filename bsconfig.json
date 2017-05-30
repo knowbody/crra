@@ -12,7 +12,7 @@
     "bs-director"
   ],
   "bs-dev-dependencies": [
-	"bs-jest",
+    "bs-jest",
     "bs-react-test-renderer"
   ],
   "js-post-build": {
@@ -21,12 +21,12 @@
   "sources": [
     {
       "dir": "src",
-	  "subdirs": [
-		{
-		  "dir": "__tests__",
-		  "type": "dev"
-		}
-	  ]
+      "subdirs": [
+        {
+          "dir": "__tests__",
+          "type": "dev"
+        }
+      ]
     }
   ]
 }
