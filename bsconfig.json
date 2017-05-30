@@ -15,6 +15,9 @@
 	"bs-jest",
     "bs-react-test-renderer"
   ],
+  "js-post-build": {
+    "cmd": "./scripts/copy.js"
+  },
   "sources": [
     {
       "dir": "src",

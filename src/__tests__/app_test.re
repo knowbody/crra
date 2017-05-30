@@ -3,10 +3,18 @@ open ExpectJs;
 
 let _ =
 
-describe "Expect" (fun _ => {
+describe "src/app.re" (fun _ => {
 
-	test "toBe" (fun _ => {
-		expect (1 + 2) |> toBe 20;
+	test "is defined" (fun _ => {
+		let component = ReactShallowRenderer.renderWithRenderer <App title="Foo Title" />;
+		expect (Js.Undefined.return component) |> toBeDefined;
+	});
+
+	test "renders" (fun _ => {
+		let tree = App.createElement title::"Foo Title" children::[] ()
+			|> ReactShallowRenderer.renderWithRenderer;
+
+		expect tree |> toMatchSnapshot;
 	});
 
 });

@@ -5,15 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"build": "npm-run-all build:*",
-	"build:bsb": "bsb -make-world",
-	"build:webpack": "webpack",
-	"clean": "bsb -clean-world",
-	"dev": "npm-run-all --parallel dev:*",
-	"dev:bsb": "npm run build:bsb -- -w",
-	"dev:webpack": "webpack-dev-server -w",
-	"jest": "jest",
-	"test": "npm-run-all build:bsb jest"
+    "build": "npm-run-all build:*",
+    "build:bsb": "bsb -make-world",
+    "build:webpack": "webpack",
+    "clean": "npm-run-all clean:*",
+    "clean:bsb": "bsb -clean-world",
+    "clean:project": "rimraf dist lib .merlin 'src/**/*.js'",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:bsb": "npm run build:bsb -- -w",
+    "dev:webpack": "webpack-dev-server -w",
+    "jest": "jest",
+    "test": "npm-run-all build:bsb jest"
   },
   "keywords": [],
   "author": "Mateusz Zatorski",
@@ -30,7 +32,13 @@
     "bs-react-test-renderer": "^1.0.0",
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
     "webpack": "^2.5.1",
     "webpack-dev-server": "2"
+  },
+  "jest": {
+    "roots": [
+      "src"
+    ]
   }
 }
