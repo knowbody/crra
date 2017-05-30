@@ -12,6 +12,7 @@
 	"dev": "npm-run-all --parallel dev:*",
 	"dev:bsb": "npm run build:bsb -- -w",
 	"dev:webpack": "webpack-dev-server -w",
+	"jest": "jest",
 	"test": "npm-run-all build:bsb jest"
   },
   "keywords": [],
