@@ -5,8 +5,8 @@ module.exports = {
   entry: './lib/js/src/index',
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, './dist/build'),
-    publicPath: '/build'
+    path: path.join(__dirname, './public'),
+    publicPath: '/public'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public')

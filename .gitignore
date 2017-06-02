@@ -4,7 +4,7 @@ node_modules
 # build
 src/**/*.js
 .merlin
-dist
+public/main.js
 lib
 .merlin
 
