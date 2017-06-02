@@ -1,8 +1,19 @@
+# dependencies
+node_modules
+
+# build
+src/**/*.js
 .merlin
-/node_modules/
-/dist/
-/lib/*
-!/lib/js/*
-/build/
+dist
+lib
+.merlin
+
+# logs
 *.log
+
+# mac
 .DS_Store
+
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]

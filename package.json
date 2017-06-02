@@ -5,12 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev | npm run bsb-watch",
-    "dev": "webpack-dev-server",
-    "bsb-watch": "bsb -make-world -w",
-    "build": "bsb -make-world && webpack",
-    "clean": "bsb -clean-world"
+    "build": "npm-run-all build:*",
+    "build:bsb": "bsb -make-world",
+    "build:webpack": "webpack",
+    "clean": "npm-run-all clean:*",
+    "clean:bsb": "bsb -clean-world",
+    "clean:project": "rimraf dist lib .merlin 'src/**/*.js'",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:bsb": "npm run build:bsb -- -w",
+    "dev:webpack": "webpack-dev-server -w",
+    "jest": "jest",
+    "test": "npm-run-all build:bsb jest"
   },
   "keywords": [],
   "author": "Mateusz Zatorski",
@@ -22,8 +27,18 @@
     "reason-react": "https://github.com/reasonml/reason-react.git"
   },
   "devDependencies": {
+    "bs-jest": "^0.1.0",
     "bs-platform": "^1.7.3",
+    "bs-react-test-renderer": "^1.0.0",
+    "jest": "^20.0.4",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
     "webpack": "^2.5.1",
     "webpack-dev-server": "2"
+  },
+  "jest": {
+    "roots": [
+      "src"
+    ]
   }
 }
