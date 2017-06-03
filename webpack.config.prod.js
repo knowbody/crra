@@ -82,7 +82,7 @@ module.exports = {
             }, {
               loader: require.resolve('postcss-loader'),
               options: {
-                ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
+                ident: 'postcss',
                 plugins: () => [
                   require('postcss-flexbugs-fixes'),
                   autoprefixer({
@@ -90,7 +90,7 @@ module.exports = {
                       '>1%',
                       'last 4 versions',
                       'Firefox ESR',
-                      'not ie < 9', // React doesn't support IE8 anyway
+                      'not ie < 9',
                     ],
                     flexbox: 'no-2009',
                   }),
@@ -139,29 +139,20 @@ module.exports = {
       fileName: 'static/asset-manifest.json',
     }),
     new SWPrecacheWebpackPlugin({
-      // By default, a cache-busting query parameter is appended to requests
-      // used to populate the caches, to ensure the responses are fresh.
-      // If a URL is already hashed by Webpack, then there is no concern
-      // about it being stale, and the cache-busting can be skipped.
+
       dontCacheBustUrlsMatching: /\.\w{8}\./,
       filename: 'service-worker.js',
       logger(message) {
         if (message.indexOf('Total precache size is') === 0) {
-          // This message occurs for every build and is a bit too noisy.
           return;
         }
         console.log(message);
       },
       minify: true,
-      // For unknown URLs, fallback to the index page
       navigateFallback: '/index.html',
-      // Ignores URLs starting from /__ (useful for Firebase):
-      // https://github.com/facebookincubator/create-react-app/issues/2237#issuecomment-302693219
+
       navigateFallbackWhitelist: [/^(?!\/__).*/],
-      // Don't precache sourcemaps (they're large) and build asset manifest:
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-      // Work around Windows path issue in SWPrecacheWebpackPlugin:
-      // https://github.com/facebookincubator/create-react-app/issues/2235
       stripPrefix: appBuild.replace(/\\/g, '/') + '/',
     }),
   ],

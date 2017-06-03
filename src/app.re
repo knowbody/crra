@@ -7,7 +7,6 @@ module App = {
   type props = {title: string};
   let name = "App";
   let handleClick _ _ => {
-    Js.log styles;
     Js.log "clicked!";
     None
   };
