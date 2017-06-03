@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
+const noopServiceWorker = require('./utils/noopServiceWorker.js');
 
 module.exports = {
   entry: './lib/js/src/index',
@@ -17,6 +18,9 @@ module.exports = {
     compress: true,
     watchOptions: {
       ignored: /node_modules/
+    },
+    setup(app) {
+      app.use(noopServiceWorker());
     }
   },
   resolve: {

@@ -46,7 +46,7 @@ registerServiceWorker.register = function register() {
 
 registerServiceWorker.unregister = function unregister() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(function(registration) {
+    navigator.serviceWorker.getRegistration().then(function(registration) {
       registration.unregister();
     });
   }

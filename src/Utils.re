@@ -17,3 +17,6 @@ external requireAssetURI : string => string = "require" [@@bs.val];
 
 external registerServiceWorker : unit => unit =
   "register" [@@bs.module "src/serviceWorker/register"];
+
+external unregisterServiceWOrker : unit => unit =
+  "unreigster" [@@bs.module "src/serviceWorker/register"];
