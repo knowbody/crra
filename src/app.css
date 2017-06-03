@@ -8,23 +8,23 @@ code {
   color: #8f8f8f;
 }
 
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
+.appLogo {
   animation: App-logo-spin infinite 20s linear;
   height: 200px;
 }
 
-.App-header {
+.appHeader {
   display: flex;
   align-items: center;
   margin: 100px;
   color: #333333;
 }
 
-.App-intro {
+.appIntro {
   font-size: large;
   color: #444;
 }

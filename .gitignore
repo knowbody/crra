@@ -3,10 +3,12 @@ node_modules
 
 # build
 src/**/*.js
+!src/serviceWorker/register.js
 .merlin
 public/main.js
 lib
 .merlin
+dist/**/*
 
 # logs
 *.log
