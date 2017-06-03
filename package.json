@@ -29,9 +29,7 @@
   "author": "Mateusz Zatorski",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^7.1.1",
     "bs-director": "^0.0.1",
-    "css-loader": "^0.28.4",
     "express": "^4.15.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -43,6 +41,7 @@
     "bs-platform": "^1.7.4",
     "bs-react-test-renderer": "^1.0.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "identity-obj-proxy": "^3.0.0",
