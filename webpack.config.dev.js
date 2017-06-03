@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
 
-const prod = process.env.NODE_ENV == 'production';
-
 module.exports = {
   entry: './lib/js/src/index',
   output: {

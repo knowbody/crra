@@ -3,6 +3,7 @@ node_modules
 
 # build
 src/**/*.js
+!src/serviceWorker/register.js
 .merlin
 dist
 lib

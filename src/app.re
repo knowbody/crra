@@ -1,6 +1,6 @@
 open Utils;
 
-let styles = requireCSS "src/app.css";
+let styles = requireCSSModule "src/app.css";
 
 module App = {
   include ReactRe.Component;
