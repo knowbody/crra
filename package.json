@@ -5,12 +5,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "now-start": "pushstate-server public/",
     "build": "npm-run-all build:*",
     "build:bsb": "bsb -make-world",
     "build:webpack": "webpack --config webpack.config.prod.js",
     "clean": "npm-run-all clean:*",
     "clean:bsb": "bsb -clean-world",
-    "clean:project": "rimraf dist lib .merlin 'src/**/*.js'",
+    "clean:project": "rimraf public/main.js lib .merlin 'src/**/*.js'",
     "dev": "npm-run-all --parallel dev:*",
     "dev:bsb": "npm run build:bsb -- -w",
     "dev:webpack": "webpack-dev-server -w --config webpack.config.dev.js",
@@ -18,7 +19,13 @@
     "test": "npm-run-all build:bsb jest",
     "serve:static": "node scripts/serveStatic.js"
   },
-  "keywords": [],
+  "keywords": [
+    "reason",
+    "react",
+    "crra",
+    "reason-react",
+    "create-reason-react-app"
+  ],
   "author": "Mateusz Zatorski",
   "license": "MIT",
   "dependencies": {
@@ -43,6 +50,7 @@
     "file-loader": "^0.11.1",
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
+    "pushstate-server": "^3.0.0",
     "rimraf": "^2.6.1",
     "rollup-loader": "^0.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",

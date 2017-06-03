@@ -5,9 +5,10 @@ node_modules
 src/**/*.js
 !src/serviceWorker/register.js
 .merlin
-dist
+public/main.js
 lib
 .merlin
+dist/**/*
 
 # logs
 *.log
