@@ -44,12 +44,13 @@
     "bs-react-test-renderer": "^1.0.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.4",
     "html-webpack-plugin": "^2.28.0",
+    "npm-run-all": "^4.0.2",
     "postcss-flexbugs-fixes": "^3.0.0",
     "postcss-loader": "^2.0.5",
-    "file-loader": "^0.11.1",
-    "jest": "^20.0.4",
-    "npm-run-all": "^4.0.2",
     "pushstate-server": "^3.0.0",
     "rimraf": "^2.6.1",
     "rollup-loader": "^0.3.0",
@@ -65,6 +66,11 @@
   "jest": {
     "roots": [
       "src"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "^src(.*)": "<rootDir>/src$1"
+    }
   }
 }
