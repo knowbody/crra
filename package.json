@@ -5,16 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "now-start": "pushstate-server public/",
     "build": "npm-run-all build:*",
     "build:bsb": "bsb -make-world",
     "build:webpack": "webpack --config config/webpack.config.prod.js",
     "clean": "npm-run-all clean:*",
     "clean:bsb": "bsb -clean-world",
-    "clean:project": "rimraf public/main.js lib .merlin 'src/**/*.js'",
-    "dev": "npm-run-all --parallel dev:*",
+    "clean:project": "rimraf dist/**/* lib .merlin 'src/**/*.js'",
+    "dev": "npm run build:bsb && npm run dev:parallel",
+    "dev:parallel": "npm-run-all --parallel dev:bsb dev:webpack",
     "dev:bsb": "npm run build:bsb -- -w",
     "dev:webpack": "webpack-dev-server -w --config config/webpack.config.dev.js",
+    "now-start": "pushstate-server dist/build",
     "jest": "jest",
     "test": "npm-run-all build:bsb jest",
     "serve:static": "node scripts/serveStatic.js"
@@ -44,9 +45,9 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
-    "html-webpack-plugin": "^2.28.0",
     "npm-run-all": "^4.0.2",
     "postcss-flexbugs-fixes": "^3.0.0",
     "postcss-loader": "^2.0.5",
@@ -58,9 +59,10 @@
     "sw-precache-webpack-plugin": "^0.11.3",
     "url-loader": "^0.5.8",
     "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-stats-plugin": "^0.1.5",
-    "webpack-dev-server": "^2.4.5"
+    "write-file-webpack-plugin": "^4.0.2"
   },
   "jest": {
     "roots": [

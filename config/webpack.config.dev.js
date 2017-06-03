@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 const noopServiceWorker = require('../utils/noopServiceWorker.js');
 
 const cssModules = process.env.CSSMODULES === 'true';
@@ -100,6 +101,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new WriteFilePlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),

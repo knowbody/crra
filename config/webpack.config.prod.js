@@ -8,7 +8,9 @@ const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 
-const appBuild = '/dist/build'
+const appBuild = '../dist/build';
+const cssModules = process.env.CSSMODULES === 'true';
+
 
 module.exports = {
   bail: true,
@@ -19,16 +21,9 @@ module.exports = {
   	path: path.join(__dirname, appBuild),
   	publicPath: '/'
   },
-  devServer: {
-  	contentBase: path.resolve(__dirname, 'public'),
-    compress: true,
-    watchOptions: {
-      ignored: /node_modules/
-    }
-  },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src/'),
+      src: path.resolve(__dirname, '../src/'),
     }
   },
   module: {
@@ -76,8 +71,8 @@ module.exports = {
               loader: require.resolve('css-loader'),
               options: {
                 importLoaders: 1,
-                modules: true,
-                localIdentName: '[name]_[hash:5]'
+                modules: cssModules,
+                localIdentName: cssModules ? '[name]_[hash:5]' : '[name]'
               },
             }, {
               loader: require.resolve('postcss-loader'),
@@ -108,7 +103,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.join(__dirname, 'public/index.html'),
+      template: path.join(__dirname, '../public/index.html'),
       minify: {
         removeComments: true,
         collapseWhitespace: true,
