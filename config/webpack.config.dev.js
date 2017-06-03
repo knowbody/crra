@@ -4,17 +4,19 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
-const noopServiceWorker = require('./utils/noopServiceWorker.js');
+const noopServiceWorker = require('../utils/noopServiceWorker.js');
+
+const cssModules = process.env.CSSMODULES === 'true';
 
 module.exports = {
   entry: './lib/js/src/index',
   output: {
   	filename: '[name].js',
-  	path: path.join(__dirname, './dist/build'),
+  	path: path.join(__dirname, '../dist/build'),
   	publicPath: '/'
   },
   devServer: {
-  	contentBase: path.resolve(__dirname, 'public'),
+  	contentBase: path.resolve(__dirname, '../public'),
     compress: true,
     watchOptions: {
       ignored: /node_modules/
@@ -25,7 +27,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src/'),
+      src: path.resolve(__dirname, '../src/'),
     }
   },
   module: {
@@ -71,8 +73,8 @@ module.exports = {
             loader: require.resolve('css-loader'),
             options: {
               importLoaders: 1,
-              modules: true,
-              localIdentName: '[name]_[hash:5]'
+              modules: cssModules,
+              localIdentName: cssModules ? '[name]_[hash:5]' : '[name]',
             },
           },
           {
@@ -103,7 +105,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.join(__dirname, 'public/index.html'),
+      template: path.join(__dirname, '../public/index.html'),
     }),
     new CaseSensitivePathsPlugin(),
   ],

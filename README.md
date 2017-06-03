@@ -9,7 +9,7 @@ Still far from it but I think a good start. I always had an issue with just jump
 I simplified @chenglou's [example repo](https://github.com/chenglou/reason-react-example) a bit, big thanks to his amazing work!
 It lowers the barrier at least for me, hope it's helpful for others too.
 
-**One of the main goals of Reason is to make the tooling simple enough to not need such a tool.** 
+**One of the main goals of Reason is to make the tooling simple enough to not need such a tool.**
 This is a work in progress towards it.
 
 For now this is more like a quick start to React Reason than a "create-reason-react-app", but the latter is the end goal of this project.
@@ -33,11 +33,9 @@ I will be adding more guides and examples to this repo. But for now, please chec
 @chenglou's repo with a few examples https://github.com/chenglou/reason-react-example.
 There's also a lot of information on syntax and Reason itself on the official website: https://facebook.github.io/reason.
 
+### Guides
+Checkout the `/guides` file for more specific information and examples.
+
 ### Contribute
 
 I'd like this to be a great "Get started..." place for Reason. Please submit feature requests, issues and pull requests. Feel free to contribute!
-
-
-
-
-
