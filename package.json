@@ -7,7 +7,6 @@
     "create-reason-react-app": "bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-source": "node build.js"
   },
   "author": "Mateusz Zatorski",
