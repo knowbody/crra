@@ -3,8 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const lower = name => path.basename(name)
-  .replace(/^./, letter => letter.toLowerCase());
+const lower = name => path.basename(name).replace(/^./, l => l.toLowerCase());
 
 const root = path.join(__dirname, '..');
 const script = process.argv[2];
