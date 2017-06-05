@@ -17,7 +17,19 @@ I am still very knew to the language and this is where I want to learn and explo
 
 ### Getting started
 
+The easiest way to get started is by running `yarn create`:
+
+1. `yarn create reason-react-app MyApp`
+
+or installing it globally:
+
 1. Install create-reason-react-app globally   
+```
+yarn global add create-reason-react-app
+```
+
+or
+
 ```
 npm i -g create-reason-react-app
 ```
