@@ -10,7 +10,7 @@
     "build-source": "node build.js"
   },
   "author": "Mateusz Zatorski",
-  "repository": "https://github.com/reasonml/reason-react.git",
+  "repository": "https://github.com/knowbody/crra.git",
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
