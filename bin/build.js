@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 require('shelljs/global');
-const paths = require('path');
+const path = require('path');
 const fs = require('fs');
 const figlet = require('figlet');
 const chalk = require('chalk');
@@ -43,7 +43,8 @@ const installPackages = () => {
 }
 
 const build = (appName) => {
-  cp('-r', __dirname + '/../src/', appName);
+  cp('-r', path.join(__dirname, '..', 'src'), appName);
+  chmod(755, path.join(appName, 'scripts', 'copy.js'));
   console.log('----------------------------------------------------------');
   figlet.text('reason react', function(err, data) {
     if (err) {
