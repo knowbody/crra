@@ -3,9 +3,7 @@
   "version": "0.1.2",
   "description": "Create Reason React App",
   "main": "index.js",
-  "bin": {
-    "create-reason-react-app": "bin/cli.js"
-  },
+  "bin": "bin/cli.js",
   "scripts": {
     "build-source": "node build.js"
   },
