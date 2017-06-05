@@ -17,10 +17,23 @@ I am still very knew to the language and this is where I want to learn and explo
 
 ### Getting started
 
-1. Clone the repo
-2. `yarn` or `npm install`
-3. `yarn dev` or `npm run dev`
-4. Open browser and navigate to: http://localhost:8080/
+1. Install create-reason-react-app globally   
+```
+npm i -g create-reason-react-app
+```
+
+2. Create new project   
+```
+create-reason-react-app MyReasonApp
+```
+
+3. cd into directory   
+```
+cd MyReasonApp
+```
+
+4. `yarn dev` or `npm run dev`
+5. Open browser and navigate to: http://localhost:8080/
 
 ### Intro
 
