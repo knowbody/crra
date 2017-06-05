@@ -16,5 +16,5 @@ program
 if (program.args.length === 1) {
   spawn(build(program.args[0]), { shell: true, stdio: 'inherit' });
 } else if (program.args.length < 1) {
-  console.log(chalk.red('Please supply a name for your new React Reason app.'));
+  console.log(chalk.red('Please supply a name for your new Reason React app.'));
 }

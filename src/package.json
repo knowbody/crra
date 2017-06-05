@@ -1,8 +1,8 @@
 {
-  "name": "create-reason-react-app",
+  "name": "reason-react-app",
   "private": true,
   "version": "0.0.0",
-  "description": "",
+  "description": "Reason React App",
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all build:*",

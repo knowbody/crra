@@ -45,7 +45,7 @@ const installPackages = () => {
 const build = (appName) => {
   cp('-r', __dirname + '/../src/', appName);
   console.log('----------------------------------------------------------');
-  figlet.text('react reason', function(err, data) {
+  figlet.text('reason react', function(err, data) {
     if (err) {
       return;
     }

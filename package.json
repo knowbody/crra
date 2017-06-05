@@ -1,7 +1,7 @@
 {
   "name": "create-reason-react-app",
   "version": "0.1.0",
-  "description": "reason react project generator",
+  "description": "Create Reason React App",
   "main": "index.js",
   "bin": {
     "create-reason-react-app": "bin/cli.js"
