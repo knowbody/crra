@@ -1,6 +1,6 @@
 {
   "name": "create-reason-react-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create Reason React App",
   "main": "index.js",
   "bin": {
@@ -13,10 +13,10 @@
   "repository": "https://github.com/reasonml/reason-react.git",
   "license": "MIT",
   "dependencies": {
-    "figlet": "^1.2.0",
-    "shelljs": "^0.7.7",
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
-    "cross-spawn": "^5.1.0"
+    "cross-spawn": "^5.1.0",
+    "figlet": "^1.2.0",
+    "shelljs": "^0.7.7"
   }
 }
