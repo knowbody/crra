@@ -1,6 +1,5 @@
-#!/usr/bin/env node
-
 require('shelljs/global');
+
 const path = require('path');
 const fs = require('fs');
 const figlet = require('figlet');
