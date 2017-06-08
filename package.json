@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "bin/cli.js",
   "scripts": {
-    "build-source": "node build.js"
+    "build-source": "node bin/build.js"
   },
   "author": "Mateusz Zatorski",
   "repository": "https://github.com/knowbody/crra.git",
