@@ -41,8 +41,13 @@ const installPackages = () => {
   })
 }
 
-const build = (appName) => {
-  cp('-r', path.join(__dirname, '..', 'src'), appName);
+const build = (appName, type = 'basic') => {
+  if (type === 'interop') {
+    cp('-r', path.join(__dirname, '..', 'src/interop'), appName);
+  }
+  if (type === 'basic') {
+    cp('-r', path.join(__dirname, '..', 'src/basic'), appName);
+  }
   chmod(755, path.join(appName, 'scripts', 'copy.js'));
   console.log('----------------------------------------------------------');
   figlet.text('reason react', function(err, data) {
