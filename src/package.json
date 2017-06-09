@@ -15,6 +15,10 @@
     "dev:parallel": "npm-run-all --parallel dev:bsb dev:webpack",
     "dev:bsb": "npm run build:bsb -- -w",
     "dev:webpack": "webpack-dev-server -w",
+    "start": "npm run build:bsb && npm run start:parallel",
+    "start:parallel": "npm-run-all --parallel start:bsb start:webpack",
+    "start:bsb": "npm run build:bsb -- -w",
+    "start:webpack": "webpack-start-server -w",
     "now-start": "pushstate-server public/",
     "jest": "jest",
     "test": "npm-run-all build:bsb jest"
