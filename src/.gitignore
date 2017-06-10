@@ -2,6 +2,7 @@
 node_modules
 
 # build
+src/**/*.js
 .merlin
 public/main.js
 lib

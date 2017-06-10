@@ -12,5 +12,5 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'public')
   },
-  plugins: [ new WriteFilePlugin() ]
+  plugins: [new WriteFilePlugin()]
 };
