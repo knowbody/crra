@@ -10,7 +10,17 @@ module.exports = {
     publicPath: '/public'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: path.resolve(__dirname, './public'),
+    compress: true,
+    watchContentBase: true,
+    publicPath: path.resolve(__dirname, './public'),
+    watchOptions: {
+      ignored: /node_modules/,
+    },
+    clientLogLevel: 'error',
+    stats: 'errors-only'
   },
-  plugins: [new WriteFilePlugin()]
+  plugins: [new WriteFilePlugin({
+    log: false,
+  })]
 };
