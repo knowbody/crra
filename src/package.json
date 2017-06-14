@@ -13,7 +13,7 @@
     "clean:project": "rimraf public/main.js lib .merlin 'src/**/*.js'",
     "dev": "node scripts/startDev.js",
     "dev:bsb": "npm run build:bsb -- -w",
-    "dev:webpack": "webpack-dev-server -w",
+    "dev:webpack": "node scripts/webpackDevServer.js",
     "now-start": "pushstate-server public/",
     "jest": "jest",
     "test": "npm-run-all build:bsb jest"
