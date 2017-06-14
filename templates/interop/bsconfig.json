@@ -5,28 +5,15 @@
 {
   "name": "create-reason-react-app",
   "reason": {
-    "react-jsx": true
+    "react-jsx": 2
   },
   "bs-dependencies": [
     "reason-react",
     "bs-director"
   ],
-  "bs-dev-dependencies": [
-    "bs-jest",
-    "bs-react-test-renderer"
-  ],
-  "js-post-build": {
-    "cmd": "./scripts/copy.js"
-  },
   "sources": [
     {
-      "dir": "src",
-      "subdirs": [
-        {
-          "dir": "__tests__",
-          "type": "dev"
-        }
-      ]
+      "dir": "src"
     }
   ]
 }
