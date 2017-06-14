@@ -11,7 +11,7 @@ describe "src/app.re" (fun _ => {
   });
 
   test "renders" (fun _ => {
-    let tree = App.createElement title::"Foo Title" children::[] ()
+    let tree = <App title="Foo Title" />
       |> ReactShallowRenderer.renderWithRenderer;
 
     expect tree |> toMatchSnapshot;
