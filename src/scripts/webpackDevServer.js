@@ -9,14 +9,16 @@ const PORT = process.env.PORT || defaultPort;
 
 const server = new WebpackDevServer(compiler, {
   contentBase: path.resolve(__dirname, '../public'),
+  publicPath: '/',
   compress: true,
   watchContentBase: true,
-  publicPath: path.resolve(__dirname, '../public'),
   watchOptions: {
     ignored: /node_modules/,
   },
+  overlay: true,
   clientLogLevel: 'error',
   stats: 'errors-only',
+  hot: true,
 });
 
 server.listen(PORT);

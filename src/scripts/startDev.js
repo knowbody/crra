@@ -59,6 +59,9 @@ webpack.stdout.on('data', (data) => {
       msg: 'OK',
     };
   } else {
+    if (str.includes('webpack: Failed to compile')) {
+      return;
+    }
     compileStatus.webpack = {
       status: 'compiling',
       msg: 'OK',
@@ -68,7 +71,6 @@ webpack.stdout.on('data', (data) => {
 });
 
 webpack.stderr.on('data', (data) => {
-  console.log(data.toString());
   compileStatus.webpack = {
     status: 'error',
     msg: data.toString(),
@@ -108,6 +110,8 @@ compileEmitter.on('log', () => {
     clearConsole();
     process.stdout.write(chalk.magenta(data))
     process.stdout.write('\n');
+    process.stdout.write(chalk.cyan(`Serving your content at localhost:${JSON.stringify(PORT)}`))
+    process.stdout.write('\n\n');
     const { bsb, webpack } = compileStatus;
     process.stdout.write(chalk.yellow('[BUCKLESCRIPT]'));
     process.stdout.write('\n');
@@ -134,7 +138,6 @@ compileEmitter.on('log', () => {
     } else {
       process.stdout.write(chalk.green('Compilation Success'));
       process.stdout.write('\n\n')
-      process.stdout.write(chalk.cyan(`Serving your content at localhost:${JSON.stringify(PORT)}`))
     }
   });
 })
