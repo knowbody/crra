@@ -2,7 +2,7 @@ var ReactDOM = require('react-dom');
 var React = require('react');
 
 // Import a Reason-React component! `comp` is the exposed, underlying ReactJS class
-var PageReason = require('../lib/js/src/interop/pageReason').comp;
+var PageReason = require('../lib/js/src/pageReason').comp;
 
 var App = React.createClass({
   render: function() {
