@@ -10,7 +10,7 @@
     "build:webpack": "webpack -p",
     "clean": "npm-run-all clean:*",
     "clean:bsb": "bsb -clean-world",
-    "clean:project": "rimraf public/main.js lib .merlin 'src/**/*.js'",
+    "clean:project": "rimraf public/main.js lib .merlin",
     "start": "npm run build:bsb && npm run start:parallel",
     "start:parallel": "npm-run-all --parallel start:bsb start:webpack",
     "start:bsb": "npm run build:bsb -- -w",
