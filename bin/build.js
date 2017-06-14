@@ -43,10 +43,10 @@ const installPackages = () => {
 
 const build = (appName, type = 'basic') => {
   if (type === 'interop') {
-    cp('-r', path.join(__dirname, '..', 'src/interop'), appName);
+    cp('-r', path.join(__dirname, '..', 'templates/interop'), appName);
   }
   if (type === 'basic') {
-    cp('-r', path.join(__dirname, '..', 'src/basic'), appName);
+    cp('-r', path.join(__dirname, '..', 'templates/basic'), appName);
   }
   chmod(755, path.join(appName, 'scripts', 'copy.js'));
   console.log('----------------------------------------------------------');
