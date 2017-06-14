@@ -2,6 +2,7 @@ const path = require('path');
 const chalk = require('chalk');
 const spawn = require('child_process').spawn;
 const EventEmitter = require('events');
+const figlet = require('figlet');
 
 const PORT = require('./env.js').PORT;
 
@@ -103,33 +104,37 @@ berror.stdout.on('data', (data) => {
 });
 
 compileEmitter.on('log', () => {
-  clearConsole();
-  const { bsb, webpack } = compileStatus;
-  process.stdout.write(chalk.yellow('[BUCKLESCRIPT]'));
-  process.stdout.write('\n');
-  if (bsb.status === 'error') {
-    process.stdout.write(chalk.red('Compilation Error'));
-    process.stdout.write('\n\n');
-    process.stdout.write(bsb.msg);
-  } else if (bsb.status === 'compiling') {
-    process.stdout.write(chalk.yellow('Compiling...'));
-  } else {
-    process.stdout.write(chalk.green('Compilation Success'));
-  }
+  figlet('Create Reason React App', { font: 'Slant' },(err, data) => {
+    clearConsole();
+    process.stdout.write(chalk.magenta(data))
+    process.stdout.write('\n');
+    const { bsb, webpack } = compileStatus;
+    process.stdout.write(chalk.yellow('[BUCKLESCRIPT]'));
+    process.stdout.write('\n');
+    if (bsb.status === 'error') {
+      process.stdout.write(chalk.red('Compilation Error'));
+      process.stdout.write('\n\n');
+      process.stdout.write(bsb.msg);
+    } else if (bsb.status === 'compiling') {
+      process.stdout.write(chalk.yellow('Compiling...'));
+    } else {
+      process.stdout.write(chalk.green('Compilation Success'));
+    }
 
-  process.stdout.write('\n\n');
-
-  process.stdout.write(chalk.yellow('[WEBPACK]'));
-  process.stdout.write('\n');
-  if (webpack.status === 'error') {
-    process.stdout.write(chalk.red('Compilation Error'));
     process.stdout.write('\n\n');
-    process.stdout.write(webpack.msg);
-  } else if (webpack.status === 'compiling') {
-    process.stdout.write(chalk.yellow('Compiling...'));
-  } else {
-    process.stdout.write(chalk.green('Compilation Success'));
-    process.stdout.write('\n\n')
-    process.stdout.write(chalk.cyan(`Serving your content at localhost:${JSON.stringify(PORT)}`))
-  }
+
+    process.stdout.write(chalk.yellow('[WEBPACK]'));
+    process.stdout.write('\n');
+    if (webpack.status === 'error') {
+      process.stdout.write(chalk.red('Compilation Error'));
+      process.stdout.write('\n\n');
+      process.stdout.write(webpack.msg);
+    } else if (webpack.status === 'compiling') {
+      process.stdout.write(chalk.yellow('Compiling...'));
+    } else {
+      process.stdout.write(chalk.green('Compilation Success'));
+      process.stdout.write('\n\n')
+      process.stdout.write(chalk.cyan(`Serving your content at localhost:${JSON.stringify(PORT)}`))
+    }
+  });
 })
