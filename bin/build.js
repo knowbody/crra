@@ -70,7 +70,7 @@ const build = (appName, type = 'basic') => {
       console.log(chalk.red('cd into the newly created ' + appName + ' directory'));
       console.log('----------------------------------------------------------');
       console.log(chalk.white('Step 2'));
-      console.log(chalk.red('yarn dev or npm run dev'));
+      console.log(chalk.red('yarn start or npm run start'));
       console.log('----------------------------------------------------------');
       console.log(chalk.white('Step 3'));
       console.log(chalk.red('Open browser and navigate to: http://localhost:8080/'))
