@@ -1,16 +1,14 @@
-module App = {
-  include ReactRe.Component;
-  type props = {title: string};
-  let name = "App";
-  let handleClick _ _ => {
-    Js.log "clicked!";
-    None
-  };
-  let render {props, updater} =>
+let click _event _state _self => Js.log "clicked!";
+
+let component = ReasonReact.statelessComponent "App";
+
+let make ::title _children => {
+  ...component,
+  render: fun () self =>
     <div className="App">
       <div className="App-header">
         <div
-          onClick=(updater handleClick)
+          onClick=(self.handle click)
           style=(
             ReactDOMRe.Style.make
               display::"flex" width::"200px" backgroundColor::"#db4d3f" cursor::"pointer" ()
@@ -26,17 +24,13 @@ module App = {
           </svg>
         </div>
         <h2 style=(ReactDOMRe.Style.make marginLeft::"30px" fontSize::"2em" ())>
-          (ReactRe.stringToElement props.title)
+          (ReasonReact.stringToElement title)
         </h2>
       </div>
       <p className="App-intro">
-        (ReactRe.stringToElement "To get started, edit ")
-        <code> (ReactRe.stringToElement "src/app.re") </code>
-        (ReactRe.stringToElement " and save to reload.")
+        (ReasonReact.stringToElement "To get started, edit ")
+        <code> (ReasonReact.stringToElement "src/app.re") </code>
+        (ReasonReact.stringToElement " and save to reload.")
       </p>
-    </div>;
+    </div>
 };
-
-include ReactRe.CreateComponent App;
-
-let createElement ::title => wrapProps {title: title};
