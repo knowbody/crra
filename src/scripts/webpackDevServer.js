@@ -21,7 +21,12 @@ const server = new WebpackDevServer(compiler, {
   hot: true,
 });
 
-server.listen(PORT);
+try {
+  server.listen(PORT);
+} catch (e) {
+  console.log(e);
+  process.exit(1);
+}
 
 ['SIGINT', 'SIGTERM'].forEach((sig) => {
   process.on(sig, () => {

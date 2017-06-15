@@ -71,11 +71,8 @@ webpack.stdout.on('data', (data) => {
 });
 
 webpack.stderr.on('data', (data) => {
-  compileStatus.webpack = {
-    status: 'error',
-    msg: data.toString(),
-  };
-  compileEmitter.emit('log');
+  console.log(data.toString());
+  process.exit(1);
 });
 
 berror.stdout.on('data', (data) => {
