@@ -1,6 +1,6 @@
 {
   "name": "create-reason-react-app",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Create Reason React App",
   "main": "index.js",
   "bin": "bin/cli.js",
