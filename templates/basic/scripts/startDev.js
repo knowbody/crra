@@ -109,9 +109,9 @@ exec('yarn --version', (err, data) => {
   compileEmitter.on('log', () => {
     figlet('Create Reason React App', { font: 'Slant' },(err, data) => {
       clearConsole();
-      process.stdout.write(chalk.magenta(data))
+      process.stdout.write(chalk.cyan(data))
       process.stdout.write('\n');
-      process.stdout.write(chalk.cyan(`Serving your content at localhost:${JSON.stringify(PORT)}`))
+      process.stdout.write(chalk.magenta(`Serving your content at localhost:${JSON.stringify(PORT)}`))
       process.stdout.write('\n\n');
       const { bsb, webpack } = compileStatus;
       process.stdout.write(chalk.yellow('[BUCKLESCRIPT]'));
@@ -141,5 +141,5 @@ exec('yarn --version', (err, data) => {
         process.stdout.write('\n\n')
       }
     });
-  })
+  });
 });
