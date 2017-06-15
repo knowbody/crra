@@ -13,7 +13,7 @@ It lowers the barrier at least for me, hope it's helpful for others too.
 This is a work in progress towards it.
 
 For now this is more like a quick start to React Reason than a "create-reason-react-app", but the latter is the end goal of this project.
-I am still very knew to the language and this is where I want to learn and explore.
+I am still very new to the language and this is where I want to learn and explore.
 
 ### Getting started
 
