@@ -11,10 +11,10 @@
     "clean": "npm-run-all clean:*",
     "clean:bsb": "bsb -clean-world",
     "clean:project": "rimraf public/main.js lib .merlin 'src/**/*.js'",
-    "start": "npm run build:bsb && npm run start:parallel",
+    "start": "node scripts/startDev.js",
     "start:parallel": "npm-run-all --parallel start:bsb start:webpack",
     "start:bsb": "npm run build:bsb -- -w",
-    "start:webpack": "webpack-dev-server -w",
+    "start:webpack": "node scripts/webpackDevServer.js",
     "jest": "jest",
     "test": "npm-run-all build:bsb jest"
   },
@@ -29,6 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "bs-director": "^0.0.1",
+    "figlet": "^1.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "reason-react": "https://github.com/SanderSpies/react-on-reason.git"

@@ -1274,6 +1274,10 @@ fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
+figlet@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/figlet/-/figlet-1.2.0.tgz#6c46537378fab649146b5a6143dda019b430b410"
+
 filename-regex@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/filename-regex/-/filename-regex-2.0.1.tgz#c1c4b9bee3e09725ddb106b75c1e301fe2f18b26"
