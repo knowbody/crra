@@ -19,7 +19,10 @@ I am still very new to the language and this is where I want to learn and explor
 
 Currently a beta version of the Reason CLI tools must be installed to use this tool. See the install instructions [here](https://github.com/reasonml/reason-cli#1-install-reason-cli-globally).
 
+_these steps might seem like they have frozen on slower computers. if it seems like one of the commands has frozen, please try re-running it adding `--verbose` to the command at the end to make sure it isn't just processing lots of information. if it does still look frozen, please let us know by opening an issue here_
+
 The easiest way to get started is by running `yarn create`:
+
 
 1. `yarn create reason-react-app MyApp`
 
