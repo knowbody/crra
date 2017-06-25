@@ -1,5 +1,4 @@
 Create Reason React App
-[![CircleCI](https://circleci.com/gh/knowbody/crra.svg?style=svg)](https://circleci.com/gh/knowbody/crra)
 ===
 
 ![image](https://cloud.githubusercontent.com/assets/3802023/26065669/945afdb4-398c-11e7-827c-d5ecbb76d0af.png)
