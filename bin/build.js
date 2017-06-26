@@ -7,26 +7,12 @@ const chalk = require('chalk');
 const execSync = require('child_process').execSync;
 const spawn = require('cross-spawn');
 
-function shouldUseYarn() {
-  try {
-    execSync('yarnpkg --version', { stdio: 'ignore' });
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
 const installPackages = () => {
   console.log(chalk.white.bold('Installing Packages'));
   return new Promise((resolve, reject) => {
-    let command;
+    let command = 'npm';
     let args = ['install'];
 
-    if (shouldUseYarn()) {
-      command = 'yarn';
-    } else {
-      command = 'npm';
-    }
 
     const child = spawn(command, args, { stdio: 'inherit' });
     child.on('close', code => {
