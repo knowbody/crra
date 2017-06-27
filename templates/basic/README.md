@@ -2,7 +2,7 @@
 
 ## Usage
 
-- **`yarn start`**: Start up the development environment
-- **`yarn build`**: Build for production
-- **`yarn run clean`**: Clean the build folder
-- **`yarn test`**: Run Jest tests
+- **`npm start`**: Start up the development environment
+- **`npm run build`**: Build for production
+- **`npm run clean`**: Clean the build folder
+- **`npm test`**: Run Jest tests
