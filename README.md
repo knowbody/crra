@@ -20,20 +20,10 @@ Currently a beta version of the Reason CLI tools must be installed to use this t
 
 _these steps might seem like they have frozen on slower computers. if it seems like one of the commands has frozen, please try re-running it adding `--verbose` to the command at the end to make sure it isn't just processing lots of information. if it does still look frozen, please let us know by opening an issue here_
 
-The easiest way to get started is by running `yarn create`:
+The easiest way to get started is by install it globally:
 
 
-1. `yarn create reason-react-app MyApp`
-
-or installing it globally:
-
-1. Install create-reason-react-app globally   
-```
-yarn global add create-reason-react-app
-```
-
-or
-
+1. Install
 ```
 npm i -g create-reason-react-app
 ```
@@ -48,12 +38,12 @@ create-reason-react-app MyReasonApp
 cd MyReasonApp
 ```
 
-4. `yarn start` or `npm run start`
+4. `npm start`
 5. Open browser and navigate to: http://localhost:8080/
 
 ### Intro
 
-The project uses bucklescript build system and webpack under the hood. When you run `yarn start`, `bsb` will run in watch mode and in parallel webpack's dev server is started at http://localhost:8080/. Files build by `bsb` can be found in the `/lib` directory. The amazing thing about `bsb` is that it produces readable javascript files.
+The project uses bucklescript build system and webpack under the hood. When you run `npm start`, `bsb` will run in watch mode and in parallel webpack's dev server is started at http://localhost:8080/. Files build by `bsb` can be found in the `/lib` directory. The amazing thing about `bsb` is that it produces readable javascript files.
 After these JS files are produced, `webpack-dev-server` uses them.
 
 ### But how can I actually build something in Reason React
@@ -65,8 +55,3 @@ There's also a lot of information on syntax and Reason itself on the official we
 ### Contribute
 
 I'd like this to be a great "Get started..." place for Reason. Please submit feature requests, issues and pull requests. Feel free to contribute!
-
-
-
-
-
