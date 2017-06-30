@@ -31,7 +31,7 @@
     "bs-director": "^0.0.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "reason-react": "https://github.com/SanderSpies/react-on-reason.git"
+    "reason-react": "^0.1.5"
   },
   "devDependencies": {
     "bs-jest": "^0.1.0",
