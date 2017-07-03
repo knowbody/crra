@@ -10,9 +10,8 @@
     "build:webpack": "webpack -p",
     "clean": "npm-run-all clean:*",
     "clean:bsb": "bsb -clean-world",
-    "clean:project": "rimraf public/main.js lib .merlin 'src/**/*.js'",
-    "start": "node scripts/startDev.js",
-    "start:parallel": "npm-run-all --parallel start:bsb start:webpack",
+    "clean:project": "rimraf public/main.js lib .merlin",
+    "start": "npm run start:webpack",
     "start:bsb": "npm run build:bsb -- -w",
     "start:webpack": "node scripts/webpackDevServer.js",
     "jest": "jest",
@@ -29,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "bs-director": "^0.0.1",
+    "bs-loader": "^1.5.3",
     "figlet": "^1.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -50,7 +50,7 @@
   },
   "jest": {
     "roots": [
-      "src"
+      "lib/js/src"
     ]
   }
 }
