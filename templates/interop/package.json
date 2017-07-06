@@ -36,7 +36,7 @@
   "devDependencies": {
     "bs-jest": "^0.1.0",
     "bs-platform": "^1.7.5",
-    "bs-react-test-renderer": "https://github.com/BuckleTypes/bs-react-test-renderer.git",
+    "bs-react-test-renderer": "^1.0.1",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
