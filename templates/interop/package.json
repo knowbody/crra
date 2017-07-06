@@ -31,12 +31,12 @@
     "bs-director": "^0.0.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "reason-react": "^0.1.5"
+    "reason-react": "^0.2.1"
   },
   "devDependencies": {
     "bs-jest": "^0.1.0",
     "bs-platform": "^1.7.5",
-    "bs-react-test-renderer": "^1.0.0",
+    "bs-react-test-renderer": "https://github.com/BuckleTypes/bs-react-test-renderer.git",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",

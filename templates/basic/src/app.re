@@ -1,10 +1,10 @@
-let click _event _state _self => Js.log "clicked!";
+let click _event _self => Js.log "clicked!";
 
 let component = ReasonReact.statelessComponent "App";
 
 let make ::title _children => {
   ...component,
-  render: fun () self =>
+  render: fun self =>
     <div className="App">
       <div className="App-header">
         <div
