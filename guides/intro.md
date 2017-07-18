@@ -12,7 +12,7 @@ A new, familiar syntax for the battle-tested language that is OCaml.
 A workflow for compiling to JavaScript and native code.
 A set of friendly documentations, libraries and utilities.
 
-~ official [Reason website](http://facebook.github.io/reason)
+~ official [Reason website](http://reasonml.github.io/)
 
 ---
 

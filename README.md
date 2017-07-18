@@ -50,7 +50,7 @@ After these JS files are produced, `webpack-dev-server` uses them.
 
 I will be adding more guides and examples to this repo. But for now, please check out
 @chenglou's repo with a few examples https://github.com/chenglou/reason-react-example.
-There's also a lot of information on syntax and Reason itself on the official website: https://facebook.github.io/reason.
+There's also a lot of information on syntax and Reason itself on the official website: https://reasonml.github.io/.
 
 ### Contribute
 
