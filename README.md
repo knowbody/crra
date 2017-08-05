@@ -31,6 +31,8 @@ npm i -g create-reason-react-app
 2. Create new project   
 ```
 create-reason-react-app MyReasonApp
+# or with Yarn: 
+yarn create reason-react-app MyReasonApp
 ```
 
 3. cd into directory   
