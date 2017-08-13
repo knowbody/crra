@@ -1,20 +1,12 @@
 {
   "name": "create-reason-react-app",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Create Reason React App",
   "main": "index.js",
-  "bin": "bin/cli.js",
-  "scripts": {
-    "build-source": "node bin/build.js"
-  },
+  "bin": "react-scripts.js",
   "author": "Mateusz Zatorski",
   "repository": "https://github.com/knowbody/crra.git",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.1.3",
-    "commander": "^2.9.0",
-    "cross-spawn": "^5.1.0",
-    "figlet": "^1.2.0",
-    "shelljs": "^0.7.7"
   }
 }
